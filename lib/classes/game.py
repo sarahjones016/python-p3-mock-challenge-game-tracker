@@ -23,7 +23,7 @@ class Game:
     
     def players(self, new_player=None):
         from classes.player import Player
-        if new_player not in self._players and type(new_player) == Player:
+        if new_player and new_player not in self._players and type(new_player) == Player:
             self._players.append(new_player)
         return self._players
     

@@ -26,7 +26,7 @@ class Player:
 
     def games_played(self, new_game=None):
         from classes.game import Game
-        if new_game not in self._games_played and type(new_game) == Game:
+        if new_game and new_game not in self._games_played and type(new_game) == Game:
             self._games_played.append(new_game)
         return self._games_played
     
